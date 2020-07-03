@@ -1,14 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Covid_Tracker_App
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,11 +22,29 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta 
+      with: 
+        node-version: 12.0.0
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    # - name: install create-react 
+    #   run : npm install -g create-react-app 
+    # - name: create basic app  
+    #   run:  create-react-app react-basic
+    - name: install react and dependencies 
+      run:  npm install 
+    - name: build the project
+      run:  CI="" npm run build
+      
+   
+
+    - name: Install Surge
+      run: npm install --global surge 
+
+    - name: Run Surge
+      run: surge ./build covid19omarpu.surge.sh --token ${{secrets.COVID_TOKEN}}
+ 
+    
+ 
+    
+    
