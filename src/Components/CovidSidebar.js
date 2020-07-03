@@ -47,7 +47,7 @@ const classes = useStyles();
       <>
       {/* {loading ? (<div></div>) : <CircularProgress color="secondary" /> } */}
       
-          <div style={{border: '1px solid red'}}>
+          <div>
           <Grid container xs={12} sm={12} md={12} spacing={0} 
               justify="center"
               style={{maxWidth: "90%",margin: "0 auto",}}> 

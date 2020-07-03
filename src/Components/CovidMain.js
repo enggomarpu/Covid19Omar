@@ -12,7 +12,7 @@ function CovidMain(props) {
     //console.log('insided main', singleCountry)
     console.log('countryName', countryName)
     return (
-        <div style={{border: '1px solid red'}}>
+        <div>
         <Grid container xs={12} sm={12} md={12} spacing={0} justify="center">
         {/* Card Confirmed */}
         <Grid item xs={12} sm={12} md={12}>
