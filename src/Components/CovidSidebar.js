@@ -53,7 +53,7 @@ const classes = useStyles();
               style={{maxWidth: "90%",margin: "0 auto",}}> 
                  {/* Confirmed Cases Global */}
                  <Grid item xs={12} sm={12} md={12}>
-                  <Typography variant="h3" align="center">Global</Typography>
+                  <Typography variant="h3" align="center">GlobalG</Typography>
               </Grid>
                  <Grid item xs={12} sm={12} md={12}>
                    <Paper className={classes.totalConfirmed}>
@@ -77,7 +77,7 @@ const classes = useStyles();
                          style={{
                            fontWeight: "bold",
                            textAlign: "center",
-                           fontSize: "2.5rem",
+                           fontSize: "1.5rem",
                          }}
                        >
                          {covidData.recovered.toLocaleString()}
@@ -91,7 +91,7 @@ const classes = useStyles();
                      {
                        <Typography
                          variant="h3"
-                         style={{ fontWeight: "bold", fontSize: "2.5rem" }}
+                         style={{ fontWeight: "bold", fontSize: "1.5rem" }}
                        >
                          {covidData.deaths.toLocaleString()}
                        </Typography>
